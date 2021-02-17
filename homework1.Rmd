@@ -24,47 +24,39 @@ library(ggrepel)
 
 ##Exercises
 
-`1.
+`1. 
 
 (4 points)
 ```{r}
 
 ```
-1>52.519
-2>7:variables
-
-
-`2.
+522519
+2.
 
 (4 points)
 
 ```{r}
-seattlepets %>%
-count(animal_name, sort = TRUE)
+
 ```
-Write your narrative below
+variables = 7
 
-
-`3. Copy the code provided in the homework documentation and paste it here. 
-
+3. 
 (4 points)
 
 ```{r}
-seattlepets %>%
-group_by(species) %>%
-count(animal_name, sort = TRUE)
+
 ```
-Write your narrative here
-
-
+NA 483
+Lucy 439
+Charlle 387
+Luna 355
 
 `4.
 
 (10 points)
 
 ```{r species-name-top5, eval=TRUE}
-seattlepets %>%
-count(species, sort = TRUE)
+
 ```
 
 `5.  What names are more common for cats than dogs? The ones above the line or the ones below the line?
