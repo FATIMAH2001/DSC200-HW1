@@ -30,8 +30,8 @@ library(ggrepel)
 ```{r}
 
 ```
-Write your narrative here
-
+1>52.519
+2>7:variables
 
 
 `2.
@@ -39,7 +39,8 @@ Write your narrative here
 (4 points)
 
 ```{r}
-
+seattlepets %>%
+count(animal_name, sort = TRUE)
 ```
 Write your narrative below
 
@@ -49,7 +50,9 @@ Write your narrative below
 (4 points)
 
 ```{r}
-
+seattlepets %>%
+group_by(species) %>%
+count(animal_name, sort = TRUE)
 ```
 Write your narrative here
 
@@ -60,7 +63,8 @@ Write your narrative here
 (10 points)
 
 ```{r species-name-top5, eval=TRUE}
-
+seattlepets %>%
+count(species, sort = TRUE)
 ```
 
 `5.  What names are more common for cats than dogs? The ones above the line or the ones below the line?
