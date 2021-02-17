@@ -37,10 +37,31 @@ NA 483 Lucy 439 Charlle 387 Luna 355
 
 (10 points)
 
+``` r
+seattlepets %>%
+group_by(species) %>%
+count(animal_name, sort = TRUE) %>%
+slice_max(n, n = 5) %>% arrange(species,n)
+```
+
+    ## # A tibble: 53 x 3
+    ## # Groups:   species [4]
+    ##    species animal_name     n
+    ##    <chr>   <chr>       <int>
+    ##  1 Cat     Max            83
+    ##  2 Cat     Lily           86
+    ##  3 Cat     Lucy          102
+    ##  4 Cat     Luna          111
+    ##  5 Cat     <NA>          406
+    ##  6 Dog     Daisy         221
+    ##  7 Dog     Luna          244
+    ##  8 Dog     Bella         249
+    ##  9 Dog     Charlie       306
+    ## 10 Dog     Lucy          337
+    ## # … with 43 more rows
+
 \`5. What names are more common for cats than dogs? The ones above the
 line or the ones below the line?
-
-Answer here
 
 (4 points)
 
